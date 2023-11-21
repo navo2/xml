@@ -1,16 +1,20 @@
-<VAST version="3.0">
-  <Ad id="123">
+<VAST version="4.0">
+  <Ad id="1">
     <Wrapper>
       <AdSystem>Sample Ad System</AdSystem>
-      <VASTAdTagURI><![CDATA[https://adserver.example.com/vast]]></VASTAdTagURI>
+      <VASTAdTagURI><![CDATA[URL_TO_YOUR_VAST_TAG]]></VASTAdTagURI>
       <Impression><![CDATA[https://tracking.impression.com]]></Impression>
       <Creatives>
         <Creative>
           <CompanionAds>
             <Companion width="300" height="250">
-              <IFrameResource>
-                <![CDATA[https://adzassets.adstudio.cloud/maliban30off/300x250/index.html]]>
-              </IFrameResource>
+              <StaticResource creativeType="text/html">
+                <![CDATA[
+                  <div style="width:300px;height:250px;background-color:#f0f0f0;">
+                    <iframe src="https://adzassets.adstudio.cloud/maliban30off/300x250/index.html" width="300" height="250" frameborder="0"></iframe>
+                  </div>
+                ]]>
+              </StaticResource>
               <CompanionClickThrough>
                 <![CDATA[https://landingpage.com]]>
               </CompanionClickThrough>
