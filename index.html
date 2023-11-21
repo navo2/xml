@@ -1,5 +1,69 @@
+<!DOCTYPE html>
 <html>
-    <body>
-        hello
-    </body>
+<head>
+  <title>Generate VAST XML</title>
+</head>
+<body>
+  <label for="adSystemInput">Ad System:</label>
+  <input type="text" id="adSystemInput"><br><br>
+
+  <label for="adTitleInput">Ad Title:</label>
+  <input type="text" id="adTitleInput"><br><br>
+
+  <label for="impressionTrackingInput">Impression Tracking URL:</label>
+  <input type="text" id="impressionTrackingInput"><br><br>
+
+  <label for="mediaFileInput">Media File URL:</label>
+  <input type="text" id="mediaFileInput"><br><br>
+
+  <button onclick="generateAndDownloadVAST()">Generate VAST XML</button>
+
+  <script>
+    function generateVASTXml(adSystem, adTitle, impressionTrackingUrl, mediaFileUrl) {
+      const vastXml = `
+        <VAST version="4.0">
+          <Ad id="ad1">
+            <InLine>
+              <AdSystem>${adSystem}</AdSystem>
+              <AdTitle>${adTitle}</AdTitle>
+              <Impression><![CDATA[${impressionTrackingUrl}]]></Impression>
+              <Creatives>
+                <Creative id="creative1">
+                  <Linear>
+                    <Duration>00:00:30</Duration>
+                    <MediaFiles>
+                      <MediaFile type="video/mp4" width="640" height="360" bitrate="500" delivery="progressive">
+                        <![CDATA[${mediaFileUrl}]]>
+                      </MediaFile>
+                    </MediaFiles>
+                  </Linear>
+                </Creative>
+              </Creatives>
+            </InLine>
+          </Ad>
+        </VAST>
+      `;
+      return vastXml;
+    }
+
+    function generateAndDownloadVAST() {
+      const adSystem = document.getElementById('adSystemInput').value;
+      const adTitle = document.getElementById('adTitleInput').value;
+      const impressionTrackingUrl = document.getElementById('impressionTrackingInput').value;
+      const mediaFileUrl = document.getElementById('mediaFileInput').value;
+
+      const vastXmlContent = generateVASTXml(adSystem, adTitle, impressionTrackingUrl, mediaFileUrl);
+
+      // Create a blob and download it
+      const blob = new Blob([vastXmlContent], { type: 'text/xml' });
+      const url = URL.createObjectURL(blob);
+
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'generated_vast.xml';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+  </script>
+</body>
 </html>
