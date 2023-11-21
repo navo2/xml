@@ -34,7 +34,7 @@
 </VideoClicks>
 <MediaFiles>
 <MediaFile id="1" delivery="progressive" type="video/mp4" bitrate="0" width="640" height="360">
-<![CDATA[ https://adzassets.s3.amazonaws.com/TVC_Sinhala_min.mp4 ]]>
+<![CDATA[ https://adzassets.s3.amazonaws.com/TVC_tamil_min.mp4 ]]>
 </MediaFile>
 </MediaFiles>
 </Linear>
