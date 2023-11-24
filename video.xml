@@ -34,7 +34,7 @@
 </VideoClicks>
 <MediaFiles>
 <MediaFile id="1" delivery="progressive" type="video/mp4" bitrate="0" width="640" height="360">
-<![CDATA[ https://content.jwplatform.com/videos/wQGs0itq-bmYWYz9w.mp4 ]]>
+<![CDATA[ https://adzassets.s3.amazonaws.com/Test/ExportNEW_compressed_compressed.mp4 ]]>
 </MediaFile>
 </MediaFiles>
 </Linear>
