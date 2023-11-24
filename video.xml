@@ -1,0 +1,21 @@
+<VAST version="4.0">
+  <Ad id="ad1">
+    <InLine>
+      <AdSystem>Adstudio Ad System</AdSystem>
+      <AdTitle>tyufuyg</AdTitle>
+      <Impression><![CDATA[ https://impression.tracking.url ]]></Impression>
+      <Creatives>
+        <Creative id="creative1">
+          <Linear>
+            <SkipOffset>00:00:05</SkipOffset>
+            <MediaFiles>
+              <MediaFile type="video/mp4" width="640" height="360" bitrate="500" delivery="progressive">
+                <![CDATA[ https://adzassets.s3.amazonaws.com/Lucky1/Final_Lucky1.mp4 ]]>
+              </MediaFile>
+            </MediaFiles>
+          </Linear>
+        </Creative>
+      </Creatives>
+    </InLine>
+  </Ad>
+</VAST>
