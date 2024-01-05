@@ -9,7 +9,8 @@
 </head>
 <body>
     <!-- Your video container -->
-    <video id="video-id">
+    
+    <video id="video-id" style="width: 100%; height: 100%;">
         <source src="https://content.jwplatform.com/videos/DZhByYyE-bmYWYz9w.mp4" type="video/mp4" />
     </video>
 
@@ -30,10 +31,10 @@
             "autoPlay": false,
             "mute": true,
             "allowTheatre": true,
-            "playPauseAnimation": false,
-            "playbackRateEnabled": false,
-            "allowDownload": false,
-            "playButtonShowing": false,
+            "playPauseAnimation": true,
+            "playbackRateEnabled": true,
+            "allowDownload": true,
+            "playButtonShowing": true,
             "fillToContainer": false,
             "posterImage": ""
         },
@@ -41,7 +42,17 @@
             "adList": [
                 {
                     "roll": "preRoll",
-                    "vastTag": "https://xml-kappa.vercel.app/lucky1.xml",
+                    "vastTag": "https://xml-kappa.vercel.app/video.xml",
+                    "adText": ""
+                },
+                {
+                    "roll": "midRoll",
+                    "vastTag": "",
+                    "adText": ""
+                },
+                {
+                    "roll": "postRoll",
+                    "vastTag": "",
                     "adText": ""
                 }
             ],
