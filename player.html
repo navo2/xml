@@ -63,6 +63,20 @@
                     "adText": ""
                 },
                 {
+                    roll: 'midRoll',
+                    vastTag: 'https://xml-kappa.vercel.app/video.xml',
+                    // In case vastTag fails, the player will fallback to one of the valid tags from this array
+                    fallbackVastTags: ['https://xml-kappa.vercel.app/video.xml', 'https://xml-kappa.vercel.app/video.xml'],
+                    // multiple ads for the same time
+                    timer: 8
+                },                
+                {
+                    roll: 'postRoll',
+                    vastTag: 'https://xml-kappa.vercel.app/video.xml',
+                    timer: 10,
+                    adClickable: false // Default true
+                },
+                {
                     "roll": "postRoll",
                     "vastTag": "https://xml-kappa.vercel.app/comsinhala.xml",
                     "adText": ""
